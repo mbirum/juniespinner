@@ -17,7 +17,7 @@ control_pins = right_pins
 sequence = motor_sequencer.forward()
 
 # max 512
-rotation = 3
+rotation = 150
 
 # initialize pins
 for pin in control_pins:
