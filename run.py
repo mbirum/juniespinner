@@ -45,12 +45,14 @@ else:
 				running = False
 			elif event.type == pygame.JOYBUTTONDOWN:
 				print(f"Button {event.button} pressed")
+				
 				sequence = motor_sequencer.backward()
 				for i in range(int(rotation)):
 					for step in range(len(sequence)):
 						for pin in range(4):
 							GPIO.output(control_pins[pin], sequence[step][pin])
-						time.sleep(sleep_interval)
+						#time.sleep(sleep_interval)
+						
 			elif event.type == pygame.JOYBUTTONUP:
 				print(f"Button {event.button} released")
 			elif event.type == pygame.JOYAXISMOTION and event.axis == 0:
