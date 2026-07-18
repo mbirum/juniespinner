@@ -48,12 +48,46 @@ else:
 				
 				sequence = motor_sequencer.backward()
 				for i in range(int(rotation)):
-					for step in range(len(sequence)):
-						GPIO.output(control_pins[0], sequence[step][0])
-						GPIO.output(control_pins[1], sequence[step][1])
-						GPIO.output(control_pins[2], sequence[step][2])
-						GPIO.output(control_pins[3], sequence[step][3])
-						#time.sleep(sleep_interval)
+					GPIO.output(control_pins[0], sequence[0][0])
+					GPIO.output(control_pins[1], sequence[0][1])
+					GPIO.output(control_pins[2], sequence[0][2])
+					GPIO.output(control_pins[3], sequence[0][3])
+
+					GPIO.output(control_pins[0], sequence[1][0])
+					GPIO.output(control_pins[1], sequence[1][1])
+					GPIO.output(control_pins[2], sequence[1][2])
+					GPIO.output(control_pins[3], sequence[1][3])
+
+					GPIO.output(control_pins[0], sequence[2][0])
+					GPIO.output(control_pins[1], sequence[2][1])
+					GPIO.output(control_pins[2], sequence[2][2])
+					GPIO.output(control_pins[3], sequence[2][3])
+
+					GPIO.output(control_pins[0], sequence[3][0])
+					GPIO.output(control_pins[1], sequence[3][1])
+					GPIO.output(control_pins[2], sequence[3][2])
+					GPIO.output(control_pins[3], sequence[3][3])
+
+					GPIO.output(control_pins[0], sequence[4][0])
+					GPIO.output(control_pins[1], sequence[4][1])
+					GPIO.output(control_pins[2], sequence[4][2])
+					GPIO.output(control_pins[3], sequence[4][3])
+
+					GPIO.output(control_pins[0], sequence[5][0])
+					GPIO.output(control_pins[1], sequence[5][1])
+					GPIO.output(control_pins[2], sequence[5][2])
+					GPIO.output(control_pins[3], sequence[5][3])
+
+					GPIO.output(control_pins[0], sequence[6][0])
+					GPIO.output(control_pins[1], sequence[6][1])
+					GPIO.output(control_pins[2], sequence[6][2])
+					GPIO.output(control_pins[3], sequence[6][3])
+
+					GPIO.output(control_pins[0], sequence[7][0])
+					GPIO.output(control_pins[1], sequence[7][1])
+					GPIO.output(control_pins[2], sequence[7][2])
+					GPIO.output(control_pins[3], sequence[7][3])
+			
 						
 			elif event.type == pygame.JOYBUTTONUP:
 				print(f"Button {event.button} released")
