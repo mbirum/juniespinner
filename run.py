@@ -49,8 +49,10 @@ else:
 				sequence = motor_sequencer.backward()
 				for i in range(int(rotation)):
 					for step in range(len(sequence)):
-						for pin in range(4):
-							GPIO.output(control_pins[pin], sequence[step][pin])
+						GPIO.output(control_pins[0], sequence[step][0])
+						GPIO.output(control_pins[1], sequence[step][1])
+						GPIO.output(control_pins[2], sequence[step][2])
+						GPIO.output(control_pins[3], sequence[step][3])
 						#time.sleep(sleep_interval)
 						
 			elif event.type == pygame.JOYBUTTONUP:
