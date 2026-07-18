@@ -14,7 +14,7 @@ right_pins = [11,13,15,37]
 sleep_interval = 0.001
 
 control_pins = right_pins
-sequence = motor_sequencer.getForwardSequence()
+sequence = motor_sequencer.forward()
 
 # max 512
 rotation = 3
@@ -76,14 +76,14 @@ else:
 				else:
 					y_axis_direction = 0
 		if y_axis_direction < 0:
-			sequence = motor_sequencer.getForwardSequence()
+			sequence = motor_sequencer.forward()
 			for i in range(int(rotation)):
 				for step in range(len(sequence)):
 					for pin in range(4):
 						GPIO.output(control_pins[pin], sequence[step][pin])
 					time.sleep(sleep_interval)
 		elif y_axis_direction > 0:
-			sequence = motor_sequencer.getBackwardSequence()
+			sequence = motor_sequencer.backward()
 			for i in range(int(rotation)):
 				for step in range(len(sequence)):
 					for pin in range(4):
