@@ -11,7 +11,7 @@ GPIO.setmode(GPIO.BOARD)
 
 left_pins = [7,11,13,15]
 right_pins = [11,13,15,37]
-sleep_interval = 0.0001
+sleep_interval = 0.001
 
 control_pins = right_pins
 sequence = motor_sequencer.forward()
